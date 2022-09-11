@@ -23,19 +23,19 @@ namespace Online_Canteen_Management_system.AllUserControls
             if(num == 0)
             {
                 labelBanner.Location = new Point(94, 367);
-                labelBanner.ForeColor = Color.Orange;
+                labelBanner.ForeColor = Color.RoyalBlue;
                 num++;
             }
             else if(num == 1)
             {
                 labelBanner.Location = new Point(166, 367);
-                labelBanner.ForeColor = Color.Green;
+                labelBanner.ForeColor = Color.LimeGreen;
                 num++;
             }
             else if(num == 2)
             {
                 labelBanner.Location = new Point(268, 367);
-                labelBanner.ForeColor = Color.RoyalBlue;
+                labelBanner.ForeColor = Color.DarkOrange;
                 num = 0;
             }
         }

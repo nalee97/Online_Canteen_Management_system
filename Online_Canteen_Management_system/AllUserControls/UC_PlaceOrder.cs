@@ -66,5 +66,52 @@ namespace Online_Canteen_Management_system.AllUserControls
             Int64 price = Int64.Parse(txtPrice.Text);
             txtTotal.Text = (quan * price).ToString();
         }
+
+        protected int n, total = 0;
+
+        
+
+        private void btnAddtoCart_Click(object sender, EventArgs e)
+        {
+           if(txtTotal.Text != "0" && txtTotal.Text != "")
+            {
+                n = guna2DataGridView1.Rows.Add();
+                guna2DataGridView1.Rows[n].Cells[0].Value = txtItemName.Text;
+                guna2DataGridView1.Rows[n].Cells[1].Value = txtPrice.Text;
+                guna2DataGridView1.Rows[n].Cells[2].Value = txtQuantityUpDown.Value;
+                guna2DataGridView1.Rows[n].Cells[3].Value = txtTotal.Text;
+
+                total += int.Parse(txtTotal.Text);
+                labelTotalAmount.Text = "Rs. " + total;
+            }
+           else
+            {
+                MessageBox.Show("Minimum Quality need to be 1", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+
+            
+        }
+
+        int amount;
+
+        private void btnRemove_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                guna2DataGridView1.Rows.RemoveAt(this.guna2DataGridView1.SelectedRows[0].Index);
+            }
+            catch { }
+            total -= amount;
+            labelTotalAmount.Text = "Rs. " + total;
+        }
+
+        private void guna2DataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            try
+            {
+                amount = int.Parse(guna2DataGridView1.Rows[e.RowIndex].Cells[3].Value.ToString());
+            }
+            catch { }
+        }
     }
 }

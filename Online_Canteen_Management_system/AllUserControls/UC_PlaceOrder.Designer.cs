@@ -100,9 +100,10 @@
             this.comboCategory.Items.AddRange(new object[] {
             "Rice and Curry",
             "Noodles",
-            "Samosa",
+            "Short Eats",
             "Hot Dog",
-            "Bread and Curry"});
+            "Bread and Curry",
+            "Soft Drink"});
             this.comboCategory.ItemsAppearance.Parent = this.comboCategory;
             this.comboCategory.Location = new System.Drawing.Point(30, 61);
             this.comboCategory.Name = "comboCategory";
@@ -115,7 +116,7 @@
             // txtSearch
             // 
             this.txtSearch.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtSearch.DefaultText = "";
+            this.txtSearch.DefaultText = "Search";
             this.txtSearch.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
             this.txtSearch.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
             this.txtSearch.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
@@ -123,7 +124,7 @@
             this.txtSearch.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.txtSearch.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtSearch.FocusedState.Parent = this.txtSearch;
-            this.txtSearch.ForeColor = System.Drawing.Color.Black;
+            this.txtSearch.ForeColor = System.Drawing.Color.DimGray;
             this.txtSearch.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtSearch.HoverState.Parent = this.txtSearch;
             this.txtSearch.Location = new System.Drawing.Point(30, 128);
@@ -132,6 +133,7 @@
             this.txtSearch.PasswordChar = '\0';
             this.txtSearch.PlaceholderText = "";
             this.txtSearch.SelectedText = "";
+            this.txtSearch.SelectionStart = 6;
             this.txtSearch.ShadowDecoration.Parent = this.txtSearch;
             this.txtSearch.Size = new System.Drawing.Size(128, 44);
             this.txtSearch.Style = Guna.UI2.WinForms.Enums.TextBoxStyle.Material;
@@ -293,7 +295,6 @@
             // 
             this.btnAddtoCart.BackColor = System.Drawing.Color.Transparent;
             this.btnAddtoCart.BorderRadius = 15;
-            this.btnAddtoCart.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.ToogleButton;
             this.btnAddtoCart.CheckedState.FillColor = System.Drawing.Color.White;
             this.btnAddtoCart.CheckedState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             this.btnAddtoCart.CheckedState.Parent = this.btnAddtoCart;
@@ -308,6 +309,7 @@
             this.btnAddtoCart.Size = new System.Drawing.Size(180, 45);
             this.btnAddtoCart.TabIndex = 13;
             this.btnAddtoCart.Text = "Add to Cart";
+            this.btnAddtoCart.Click += new System.EventHandler(this.btnAddtoCart_Click);
             // 
             // guna2DataGridView1
             // 
@@ -372,6 +374,7 @@
             this.guna2DataGridView1.ThemeStyle.RowsStyle.Height = 24;
             this.guna2DataGridView1.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.guna2DataGridView1.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            this.guna2DataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.guna2DataGridView1_CellClick);
             // 
             // Column1
             // 
@@ -401,7 +404,6 @@
             // 
             this.btnRemove.BackColor = System.Drawing.Color.Transparent;
             this.btnRemove.BorderRadius = 15;
-            this.btnRemove.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.ToogleButton;
             this.btnRemove.CheckedState.FillColor = System.Drawing.Color.White;
             this.btnRemove.CheckedState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             this.btnRemove.CheckedState.Parent = this.btnRemove;
@@ -416,12 +418,12 @@
             this.btnRemove.Size = new System.Drawing.Size(139, 36);
             this.btnRemove.TabIndex = 15;
             this.btnRemove.Text = "Remove";
+            this.btnRemove.Click += new System.EventHandler(this.btnRemove_Click);
             // 
             // btnPrint
             // 
             this.btnPrint.BackColor = System.Drawing.Color.Transparent;
             this.btnPrint.BorderRadius = 15;
-            this.btnPrint.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.ToogleButton;
             this.btnPrint.CheckedState.FillColor = System.Drawing.Color.White;
             this.btnPrint.CheckedState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             this.btnPrint.CheckedState.Parent = this.btnPrint;
@@ -454,9 +456,9 @@
             this.labelTotalAmount.BackColor = System.Drawing.Color.Green;
             this.labelTotalAmount.Font = new System.Drawing.Font("Comic Sans MS", 10.8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelTotalAmount.ForeColor = System.Drawing.Color.White;
-            this.labelTotalAmount.Location = new System.Drawing.Point(420, 465);
+            this.labelTotalAmount.Location = new System.Drawing.Point(416, 462);
             this.labelTotalAmount.Name = "labelTotalAmount";
-            this.labelTotalAmount.Size = new System.Drawing.Size(106, 26);
+            this.labelTotalAmount.Size = new System.Drawing.Size(106, 45);
             this.labelTotalAmount.TabIndex = 18;
             this.labelTotalAmount.Text = "Rs.00";
             this.labelTotalAmount.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;

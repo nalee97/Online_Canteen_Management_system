@@ -122,9 +122,10 @@
             this.txtCategory.Items.AddRange(new object[] {
             "Rice and Curry",
             "Noodles",
-            "Samosa",
+            "Short Eats",
             "Hot Dog",
-            "Bread and Curry"});
+            "Bread and Curry",
+            "Soft Drink"});
             this.txtCategory.ItemsAppearance.Parent = this.txtCategory;
             this.txtCategory.Location = new System.Drawing.Point(171, 193);
             this.txtCategory.Name = "txtCategory";

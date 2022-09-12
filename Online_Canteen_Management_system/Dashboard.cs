@@ -39,6 +39,7 @@ namespace Online_Canteen_Management_system
             uC_AddItems1.Visible = false;
             uC_PlaceOrder1.Visible = false;
             uC_UpdateItems1.Visible = false;
+            uC_RemoveItem1.Visible = false;
         }
 
         private void panel1_Paint(object sender, PaintEventArgs e)
@@ -46,7 +47,7 @@ namespace Online_Canteen_Management_system
 
         }
 
-        //Add items class
+        //Add items class method name is to guna2Button_Click
         private void guna2Button2_Click(object sender, EventArgs e)
         {
             uC_AddItems1.Visible = true;
@@ -77,6 +78,12 @@ namespace Online_Canteen_Management_system
         {
             uC_UpdateItems1.Visible = true;
             uC_UpdateItems1.BringToFront();
+        }
+
+        private void btnRemove_Click(object sender, EventArgs e)
+        {
+            uC_RemoveItem1.Visible = true;
+            uC_RemoveItem1.BringToFront();
         }
     }
 }

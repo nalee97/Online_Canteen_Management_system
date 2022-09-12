@@ -38,7 +38,7 @@ namespace Online_Canteen_Management_system
         {
             uC_AddItems1.Visible = false;
             uC_PlaceOrder1.Visible = false;
-            //uC_AddItems1.BringToFront();
+            uC_UpdateItems1.Visible = false;
         }
 
         private void panel1_Paint(object sender, PaintEventArgs e)
@@ -71,6 +71,12 @@ namespace Online_Canteen_Management_system
             guna2Transition1.ShowSync(uC_PlaceOrder1);
             uC_PlaceOrder1.Visible = true;
             uC_PlaceOrder1.BringToFront();
+        }
+
+        private void btnUpdate_Click(object sender, EventArgs e)
+        {
+            uC_UpdateItems1.Visible = true;
+            uC_UpdateItems1.BringToFront();
         }
     }
 }

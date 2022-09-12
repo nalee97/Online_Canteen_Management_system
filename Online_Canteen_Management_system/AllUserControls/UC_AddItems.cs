@@ -37,5 +37,10 @@ namespace Online_Canteen_Management_system.AllUserControls
         {
             clearAll();
         }
+
+        private void UC_AddItems_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

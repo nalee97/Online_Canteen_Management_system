@@ -75,11 +75,11 @@ namespace Online_Canteen_Management_system.AllUserControls
         {
            if(txtTotal.Text != "0" && txtTotal.Text != "")
             {
-                n = guna2DataGridView1.Rows.Add();
-                guna2DataGridView1.Rows[n].Cells[0].Value = txtItemName.Text;
-                guna2DataGridView1.Rows[n].Cells[1].Value = txtPrice.Text;
-                guna2DataGridView1.Rows[n].Cells[2].Value = txtQuantityUpDown.Value;
-                guna2DataGridView1.Rows[n].Cells[3].Value = txtTotal.Text;
+                n = nalee2DataGridView1.Rows.Add();
+                nalee2DataGridView1.Rows[n].Cells[0].Value = txtItemName.Text;
+                nalee2DataGridView1.Rows[n].Cells[1].Value = txtPrice.Text;
+                nalee2DataGridView1.Rows[n].Cells[2].Value = txtQuantityUpDown.Value;
+                nalee2DataGridView1.Rows[n].Cells[3].Value = txtTotal.Text;
 
                 total += int.Parse(txtTotal.Text);
                 labelTotalAmount.Text = "Rs. " + total;
@@ -98,18 +98,23 @@ namespace Online_Canteen_Management_system.AllUserControls
         {
             try
             {
-                guna2DataGridView1.Rows.RemoveAt(this.guna2DataGridView1.SelectedRows[0].Index);
+                nalee2DataGridView1.Rows.RemoveAt(this.nalee2DataGridView1.SelectedRows[0].Index);
             }
             catch { }
             total -= amount;
             labelTotalAmount.Text = "Rs. " + total;
         }
 
+        private void UC_PlaceOrder_Load(object sender, EventArgs e)
+        {
+
+        }
+
         private void guna2DataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             try
             {
-                amount = int.Parse(guna2DataGridView1.Rows[e.RowIndex].Cells[3].Value.ToString());
+                amount = int.Parse(nalee2DataGridView1.Rows[e.RowIndex].Cells[3].Value.ToString());
             }
             catch { }
         }

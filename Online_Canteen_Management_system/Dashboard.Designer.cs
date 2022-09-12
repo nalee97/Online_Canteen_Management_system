@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            Guna.UI2.AnimatorNS.Animation animation3 = new Guna.UI2.AnimatorNS.Animation();
+            Guna.UI2.AnimatorNS.Animation animation2 = new Guna.UI2.AnimatorNS.Animation();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Dashboard));
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnLogOut = new System.Windows.Forms.LinkLabel();
@@ -39,15 +39,17 @@
             this.btnAddItems = new Guna.UI2.WinForms.Guna2Button();
             this.btnPlaceOrder = new Guna.UI2.WinForms.Guna2Button();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.uC_PlaceOrder1 = new Online_Canteen_Management_system.AllUserControls.UC_PlaceOrder();
+            this.uC_AddItems1 = new Online_Canteen_Management_system.AllUserControls.UC_AddItems();
+            this.uC_Welcome2 = new Online_Canteen_Management_system.AllUserControls.UC_Welcome();
             this.guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.guna2Elipse2 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.guna2Elipse3 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.guna2Elipse4 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.guna2Transition1 = new Guna.UI2.WinForms.Guna2Transition();
-            this.uC_AddItems1 = new Online_Canteen_Management_system.AllUserControls.UC_AddItems();
-            this.uC_Welcome2 = new Online_Canteen_Management_system.AllUserControls.UC_Welcome();
             this.guna2Elipse5 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
-            this.uC_PlaceOrder1 = new Online_Canteen_Management_system.AllUserControls.UC_PlaceOrder();
+            this.guna2Elipse6 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
+            this.uC_UpdateItems1 = new Online_Canteen_Management_system.AllUserControls.UC_UpdateItems();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
@@ -143,6 +145,7 @@
             this.btnUpdate.Size = new System.Drawing.Size(269, 50);
             this.btnUpdate.TabIndex = 2;
             this.btnUpdate.Text = "Update Items";
+            this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
             // 
             // btnAddItems
             // 
@@ -191,6 +194,7 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.White;
+            this.panel2.Controls.Add(this.uC_UpdateItems1);
             this.panel2.Controls.Add(this.uC_PlaceOrder1);
             this.panel2.Controls.Add(this.uC_AddItems1);
             this.panel2.Controls.Add(this.uC_Welcome2);
@@ -200,6 +204,36 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(1041, 633);
             this.panel2.TabIndex = 1;
+            // 
+            // uC_PlaceOrder1
+            // 
+            this.uC_PlaceOrder1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("uC_PlaceOrder1.BackgroundImage")));
+            this.uC_PlaceOrder1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.guna2Transition1.SetDecoration(this.uC_PlaceOrder1, Guna.UI2.AnimatorNS.DecorationType.None);
+            this.uC_PlaceOrder1.Location = new System.Drawing.Point(138, 41);
+            this.uC_PlaceOrder1.Name = "uC_PlaceOrder1";
+            this.uC_PlaceOrder1.Size = new System.Drawing.Size(781, 554);
+            this.uC_PlaceOrder1.TabIndex = 3;
+            // 
+            // uC_AddItems1
+            // 
+            this.uC_AddItems1.BackColor = System.Drawing.Color.White;
+            this.uC_AddItems1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("uC_AddItems1.BackgroundImage")));
+            this.guna2Transition1.SetDecoration(this.uC_AddItems1, Guna.UI2.AnimatorNS.DecorationType.None);
+            this.uC_AddItems1.Location = new System.Drawing.Point(138, 41);
+            this.uC_AddItems1.Name = "uC_AddItems1";
+            this.uC_AddItems1.Size = new System.Drawing.Size(781, 554);
+            this.uC_AddItems1.TabIndex = 2;
+            // 
+            // uC_Welcome2
+            // 
+            this.uC_Welcome2.BackColor = System.Drawing.Color.White;
+            this.uC_Welcome2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.guna2Transition1.SetDecoration(this.uC_Welcome2, Guna.UI2.AnimatorNS.DecorationType.None);
+            this.uC_Welcome2.Location = new System.Drawing.Point(92, 53);
+            this.uC_Welcome2.Name = "uC_Welcome2";
+            this.uC_Welcome2.Size = new System.Drawing.Size(781, 514);
+            this.uC_Welcome2.TabIndex = 1;
             // 
             // guna2Elipse1
             // 
@@ -225,57 +259,41 @@
             // 
             this.guna2Transition1.AnimationType = Guna.UI2.AnimatorNS.AnimationType.HorizSlide;
             this.guna2Transition1.Cursor = null;
-            animation3.AnimateOnlyDifferences = true;
-            animation3.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation3.BlindCoeff")));
-            animation3.LeafCoeff = 0F;
-            animation3.MaxTime = 1F;
-            animation3.MinTime = 0F;
-            animation3.MosaicCoeff = ((System.Drawing.PointF)(resources.GetObject("animation3.MosaicCoeff")));
-            animation3.MosaicShift = ((System.Drawing.PointF)(resources.GetObject("animation3.MosaicShift")));
-            animation3.MosaicSize = 0;
-            animation3.Padding = new System.Windows.Forms.Padding(0);
-            animation3.RotateCoeff = 0F;
-            animation3.RotateLimit = 0F;
-            animation3.ScaleCoeff = ((System.Drawing.PointF)(resources.GetObject("animation3.ScaleCoeff")));
-            animation3.SlideCoeff = ((System.Drawing.PointF)(resources.GetObject("animation3.SlideCoeff")));
-            animation3.TimeCoeff = 0F;
-            animation3.TransparencyCoeff = 0F;
-            this.guna2Transition1.DefaultAnimation = animation3;
-            // 
-            // uC_AddItems1
-            // 
-            this.uC_AddItems1.BackColor = System.Drawing.Color.White;
-            this.uC_AddItems1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("uC_AddItems1.BackgroundImage")));
-            this.guna2Transition1.SetDecoration(this.uC_AddItems1, Guna.UI2.AnimatorNS.DecorationType.None);
-            this.uC_AddItems1.Location = new System.Drawing.Point(138, 41);
-            this.uC_AddItems1.Name = "uC_AddItems1";
-            this.uC_AddItems1.Size = new System.Drawing.Size(781, 554);
-            this.uC_AddItems1.TabIndex = 2;
-            // 
-            // uC_Welcome2
-            // 
-            this.uC_Welcome2.BackColor = System.Drawing.Color.White;
-            this.uC_Welcome2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.guna2Transition1.SetDecoration(this.uC_Welcome2, Guna.UI2.AnimatorNS.DecorationType.None);
-            this.uC_Welcome2.Location = new System.Drawing.Point(92, 53);
-            this.uC_Welcome2.Name = "uC_Welcome2";
-            this.uC_Welcome2.Size = new System.Drawing.Size(781, 514);
-            this.uC_Welcome2.TabIndex = 1;
+            animation2.AnimateOnlyDifferences = true;
+            animation2.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation2.BlindCoeff")));
+            animation2.LeafCoeff = 0F;
+            animation2.MaxTime = 1F;
+            animation2.MinTime = 0F;
+            animation2.MosaicCoeff = ((System.Drawing.PointF)(resources.GetObject("animation2.MosaicCoeff")));
+            animation2.MosaicShift = ((System.Drawing.PointF)(resources.GetObject("animation2.MosaicShift")));
+            animation2.MosaicSize = 0;
+            animation2.Padding = new System.Windows.Forms.Padding(0);
+            animation2.RotateCoeff = 0F;
+            animation2.RotateLimit = 0F;
+            animation2.ScaleCoeff = ((System.Drawing.PointF)(resources.GetObject("animation2.ScaleCoeff")));
+            animation2.SlideCoeff = ((System.Drawing.PointF)(resources.GetObject("animation2.SlideCoeff")));
+            animation2.TimeCoeff = 0F;
+            animation2.TransparencyCoeff = 0F;
+            this.guna2Transition1.DefaultAnimation = animation2;
             // 
             // guna2Elipse5
             // 
             this.guna2Elipse5.BorderRadius = 30;
             this.guna2Elipse5.TargetControl = this.panel2;
             // 
-            // uC_PlaceOrder1
+            // guna2Elipse6
             // 
-            this.uC_PlaceOrder1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("uC_PlaceOrder1.BackgroundImage")));
-            this.uC_PlaceOrder1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.guna2Transition1.SetDecoration(this.uC_PlaceOrder1, Guna.UI2.AnimatorNS.DecorationType.None);
-            this.uC_PlaceOrder1.Location = new System.Drawing.Point(138, 41);
-            this.uC_PlaceOrder1.Name = "uC_PlaceOrder1";
-            this.uC_PlaceOrder1.Size = new System.Drawing.Size(781, 554);
-            this.uC_PlaceOrder1.TabIndex = 3;
+            this.guna2Elipse6.BorderRadius = 30;
+            this.guna2Elipse6.TargetControl = this.panel2;
+            // 
+            // uC_UpdateItems1
+            // 
+            this.uC_UpdateItems1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("uC_UpdateItems1.BackgroundImage")));
+            this.guna2Transition1.SetDecoration(this.uC_UpdateItems1, Guna.UI2.AnimatorNS.DecorationType.None);
+            this.uC_UpdateItems1.Location = new System.Drawing.Point(138, 41);
+            this.uC_UpdateItems1.Name = "uC_UpdateItems1";
+            this.uC_UpdateItems1.Size = new System.Drawing.Size(781, 554);
+            this.uC_UpdateItems1.TabIndex = 4;
             // 
             // Dashboard
             // 
@@ -318,5 +336,7 @@
         private Guna.UI2.WinForms.Guna2Transition guna2Transition1;
         private Guna.UI2.WinForms.Guna2Elipse guna2Elipse5;
         private AllUserControls.UC_PlaceOrder uC_PlaceOrder1;
+        private Guna.UI2.WinForms.Guna2Elipse guna2Elipse6;
+        private AllUserControls.UC_UpdateItems uC_UpdateItems1;
     }
 }

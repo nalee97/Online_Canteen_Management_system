@@ -19,7 +19,7 @@ namespace Online_Canteen_Management_system
 
         private void Login_Click(object sender, EventArgs e)
         {
-            if(txtUsername.Text == "canteen" && txtPassword.Text == "pass")
+            if(txtUsername.Text == "canteen" && txtPassword.Text == "1234")
             {
                 Dashboard ds = new Dashboard("Admin");
                 ds.Show();

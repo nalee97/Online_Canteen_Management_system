@@ -78,7 +78,7 @@
             // txtUsername
             // 
             this.txtUsername.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtUsername.DefaultText = "";
+            this.txtUsername.DefaultText = "canteen";
             this.txtUsername.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
             this.txtUsername.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
             this.txtUsername.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
@@ -96,6 +96,7 @@
             this.txtUsername.PasswordChar = '\0';
             this.txtUsername.PlaceholderText = "Enter UserName";
             this.txtUsername.SelectedText = "";
+            this.txtUsername.SelectionStart = 7;
             this.txtUsername.ShadowDecoration.Parent = this.txtUsername;
             this.txtUsername.Size = new System.Drawing.Size(325, 44);
             this.txtUsername.TabIndex = 3;
@@ -103,7 +104,7 @@
             // txtPassword
             // 
             this.txtPassword.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtPassword.DefaultText = "";
+            this.txtPassword.DefaultText = "1234";
             this.txtPassword.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
             this.txtPassword.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
             this.txtPassword.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
@@ -121,6 +122,7 @@
             this.txtPassword.PasswordChar = '*';
             this.txtPassword.PlaceholderText = "Enter Password";
             this.txtPassword.SelectedText = "";
+            this.txtPassword.SelectionStart = 4;
             this.txtPassword.ShadowDecoration.Parent = this.txtPassword;
             this.txtPassword.Size = new System.Drawing.Size(325, 44);
             this.txtPassword.TabIndex = 4;

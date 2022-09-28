@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DGVPrinterHelper;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -108,6 +109,25 @@ namespace Online_Canteen_Management_system.AllUserControls
         private void UC_PlaceOrder_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void btnPrint_Click(object sender, EventArgs e)
+        {
+            DGVPrinter printer = new DGVPrinter();
+            printer.Title = "Customer Bill";
+            printer.SubTitle = string.Format("Date : {0}", DateTime.Now.Date);
+            printer.SubTitleFormatFlags = StringFormatFlags.LineLimit | StringFormatFlags.NoClip;
+            printer.PageNumbers = true;
+            printer.PageNumberInHeader = false;
+            printer.PorportionalColumns = true;
+            printer.HeaderCellAlignment = StringAlignment.Near;
+            printer.Footer = "Total Amount is :" + labelTotalAmount.Text;
+            printer.FooterSpacing = 16;
+            printer.PrintDataGridView(nalee2DataGridView1);
+
+            total = 0;
+            nalee2DataGridView1.Rows.Clear();
+            labelTotalAmount.Text = "Rs." + total;
         }
 
         private void guna2DataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)

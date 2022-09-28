@@ -39,6 +39,11 @@
             this.btnAddItems = new Guna.UI2.WinForms.Guna2Button();
             this.btnPlaceOrder = new Guna.UI2.WinForms.Guna2Button();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.uC_RemoveItem1 = new Online_Canteen_Management_system.AllUserControls.UC_RemoveItem();
+            this.uC_UpdateItems1 = new Online_Canteen_Management_system.AllUserControls.UC_UpdateItems();
+            this.uC_PlaceOrder1 = new Online_Canteen_Management_system.AllUserControls.UC_PlaceOrder();
+            this.uC_AddItems1 = new Online_Canteen_Management_system.AllUserControls.UC_AddItems();
+            this.uC_Welcome2 = new Online_Canteen_Management_system.AllUserControls.UC_Welcome();
             this.guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.guna2Elipse2 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.guna2Elipse3 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
@@ -46,12 +51,7 @@
             this.guna2Transition1 = new Guna.UI2.WinForms.Guna2Transition();
             this.guna2Elipse5 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.guna2Elipse6 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
-            this.uC_UpdateItems1 = new Online_Canteen_Management_system.AllUserControls.UC_UpdateItems();
-            this.uC_PlaceOrder1 = new Online_Canteen_Management_system.AllUserControls.UC_PlaceOrder();
-            this.uC_AddItems1 = new Online_Canteen_Management_system.AllUserControls.UC_AddItems();
-            this.uC_Welcome2 = new Online_Canteen_Management_system.AllUserControls.UC_Welcome();
             this.guna2Elipse7 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
-            this.uC_RemoveItem1 = new Online_Canteen_Management_system.AllUserControls.UC_RemoveItem();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
@@ -209,6 +209,54 @@
             this.panel2.Size = new System.Drawing.Size(1041, 633);
             this.panel2.TabIndex = 1;
             // 
+            // uC_RemoveItem1
+            // 
+            this.uC_RemoveItem1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("uC_RemoveItem1.BackgroundImage")));
+            this.guna2Transition1.SetDecoration(this.uC_RemoveItem1, Guna.UI2.AnimatorNS.DecorationType.None);
+            this.uC_RemoveItem1.Location = new System.Drawing.Point(138, 41);
+            this.uC_RemoveItem1.Name = "uC_RemoveItem1";
+            this.uC_RemoveItem1.Size = new System.Drawing.Size(781, 554);
+            this.uC_RemoveItem1.TabIndex = 5;
+            // 
+            // uC_UpdateItems1
+            // 
+            this.uC_UpdateItems1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("uC_UpdateItems1.BackgroundImage")));
+            this.guna2Transition1.SetDecoration(this.uC_UpdateItems1, Guna.UI2.AnimatorNS.DecorationType.None);
+            this.uC_UpdateItems1.Location = new System.Drawing.Point(138, 41);
+            this.uC_UpdateItems1.Name = "uC_UpdateItems1";
+            this.uC_UpdateItems1.Size = new System.Drawing.Size(781, 554);
+            this.uC_UpdateItems1.TabIndex = 4;
+            // 
+            // uC_PlaceOrder1
+            // 
+            this.uC_PlaceOrder1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("uC_PlaceOrder1.BackgroundImage")));
+            this.uC_PlaceOrder1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.guna2Transition1.SetDecoration(this.uC_PlaceOrder1, Guna.UI2.AnimatorNS.DecorationType.None);
+            this.uC_PlaceOrder1.Location = new System.Drawing.Point(138, 41);
+            this.uC_PlaceOrder1.Name = "uC_PlaceOrder1";
+            this.uC_PlaceOrder1.Size = new System.Drawing.Size(781, 554);
+            this.uC_PlaceOrder1.TabIndex = 3;
+            // 
+            // uC_AddItems1
+            // 
+            this.uC_AddItems1.BackColor = System.Drawing.Color.White;
+            this.uC_AddItems1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("uC_AddItems1.BackgroundImage")));
+            this.guna2Transition1.SetDecoration(this.uC_AddItems1, Guna.UI2.AnimatorNS.DecorationType.None);
+            this.uC_AddItems1.Location = new System.Drawing.Point(138, 41);
+            this.uC_AddItems1.Name = "uC_AddItems1";
+            this.uC_AddItems1.Size = new System.Drawing.Size(781, 554);
+            this.uC_AddItems1.TabIndex = 2;
+            // 
+            // uC_Welcome2
+            // 
+            this.uC_Welcome2.BackColor = System.Drawing.Color.White;
+            this.uC_Welcome2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.guna2Transition1.SetDecoration(this.uC_Welcome2, Guna.UI2.AnimatorNS.DecorationType.None);
+            this.uC_Welcome2.Location = new System.Drawing.Point(92, 53);
+            this.uC_Welcome2.Name = "uC_Welcome2";
+            this.uC_Welcome2.Size = new System.Drawing.Size(781, 514);
+            this.uC_Welcome2.TabIndex = 1;
+            // 
             // guna2Elipse1
             // 
             this.guna2Elipse1.BorderRadius = 30;
@@ -260,58 +308,10 @@
             this.guna2Elipse6.BorderRadius = 30;
             this.guna2Elipse6.TargetControl = this.panel2;
             // 
-            // uC_UpdateItems1
-            // 
-            this.uC_UpdateItems1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("uC_UpdateItems1.BackgroundImage")));
-            this.guna2Transition1.SetDecoration(this.uC_UpdateItems1, Guna.UI2.AnimatorNS.DecorationType.None);
-            this.uC_UpdateItems1.Location = new System.Drawing.Point(138, 41);
-            this.uC_UpdateItems1.Name = "uC_UpdateItems1";
-            this.uC_UpdateItems1.Size = new System.Drawing.Size(781, 554);
-            this.uC_UpdateItems1.TabIndex = 4;
-            // 
-            // uC_PlaceOrder1
-            // 
-            this.uC_PlaceOrder1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("uC_PlaceOrder1.BackgroundImage")));
-            this.uC_PlaceOrder1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.guna2Transition1.SetDecoration(this.uC_PlaceOrder1, Guna.UI2.AnimatorNS.DecorationType.None);
-            this.uC_PlaceOrder1.Location = new System.Drawing.Point(138, 41);
-            this.uC_PlaceOrder1.Name = "uC_PlaceOrder1";
-            this.uC_PlaceOrder1.Size = new System.Drawing.Size(781, 554);
-            this.uC_PlaceOrder1.TabIndex = 3;
-            // 
-            // uC_AddItems1
-            // 
-            this.uC_AddItems1.BackColor = System.Drawing.Color.White;
-            this.uC_AddItems1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("uC_AddItems1.BackgroundImage")));
-            this.guna2Transition1.SetDecoration(this.uC_AddItems1, Guna.UI2.AnimatorNS.DecorationType.None);
-            this.uC_AddItems1.Location = new System.Drawing.Point(138, 41);
-            this.uC_AddItems1.Name = "uC_AddItems1";
-            this.uC_AddItems1.Size = new System.Drawing.Size(781, 554);
-            this.uC_AddItems1.TabIndex = 2;
-            // 
-            // uC_Welcome2
-            // 
-            this.uC_Welcome2.BackColor = System.Drawing.Color.White;
-            this.uC_Welcome2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.guna2Transition1.SetDecoration(this.uC_Welcome2, Guna.UI2.AnimatorNS.DecorationType.None);
-            this.uC_Welcome2.Location = new System.Drawing.Point(92, 53);
-            this.uC_Welcome2.Name = "uC_Welcome2";
-            this.uC_Welcome2.Size = new System.Drawing.Size(781, 514);
-            this.uC_Welcome2.TabIndex = 1;
-            // 
             // guna2Elipse7
             // 
             this.guna2Elipse7.BorderRadius = 30;
             this.guna2Elipse7.TargetControl = this.panel2;
-            // 
-            // uC_RemoveItem1
-            // 
-            this.uC_RemoveItem1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("uC_RemoveItem1.BackgroundImage")));
-            this.guna2Transition1.SetDecoration(this.uC_RemoveItem1, Guna.UI2.AnimatorNS.DecorationType.None);
-            this.uC_RemoveItem1.Location = new System.Drawing.Point(138, 41);
-            this.uC_RemoveItem1.Name = "uC_RemoveItem1";
-            this.uC_RemoveItem1.Size = new System.Drawing.Size(781, 554);
-            this.uC_RemoveItem1.TabIndex = 5;
             // 
             // Dashboard
             // 

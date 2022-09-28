@@ -215,7 +215,7 @@
             this.txtItemName.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtItemName.HoverState.Parent = this.txtItemName;
             this.txtItemName.Location = new System.Drawing.Point(259, 32);
-            this.txtItemName.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtItemName.Margin = new System.Windows.Forms.Padding(4);
             this.txtItemName.Name = "txtItemName";
             this.txtItemName.PasswordChar = '\0';
             this.txtItemName.PlaceholderText = "";
@@ -242,7 +242,7 @@
             this.txtPrice.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtPrice.HoverState.Parent = this.txtPrice;
             this.txtPrice.Location = new System.Drawing.Point(551, 32);
-            this.txtPrice.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtPrice.Margin = new System.Windows.Forms.Padding(4);
             this.txtPrice.Name = "txtPrice";
             this.txtPrice.PasswordChar = '\0';
             this.txtPrice.PlaceholderText = "";
@@ -269,7 +269,7 @@
             this.txtTotal.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtTotal.HoverState.Parent = this.txtTotal;
             this.txtTotal.Location = new System.Drawing.Point(551, 138);
-            this.txtTotal.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtTotal.Margin = new System.Windows.Forms.Padding(4);
             this.txtTotal.Name = "txtTotal";
             this.txtTotal.PasswordChar = '\0';
             this.txtTotal.PlaceholderText = "";
@@ -294,6 +294,7 @@
             this.txtQuantityUpDown.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtQuantityUpDown.ForeColor = System.Drawing.Color.Black;
             this.txtQuantityUpDown.Location = new System.Drawing.Point(260, 138);
+            this.txtQuantityUpDown.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtQuantityUpDown.Name = "txtQuantityUpDown";
             this.txtQuantityUpDown.ShadowDecoration.Parent = this.txtQuantityUpDown;
             this.txtQuantityUpDown.Size = new System.Drawing.Size(266, 44);
@@ -447,6 +448,7 @@
             this.btnPrint.Size = new System.Drawing.Size(139, 36);
             this.btnPrint.TabIndex = 16;
             this.btnPrint.Text = "Print";
+            this.btnPrint.Click += new System.EventHandler(this.btnPrint_Click);
             // 
             // label7
             // 

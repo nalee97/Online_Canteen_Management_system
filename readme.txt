@@ -34,9 +34,8 @@ Remove_items-
  -Admin can remove the by cliking.it ask to delete and click yes it will be delete.
 
 
-I am downloaded some dll file and add visual studio 2022 tool box to make better page design.in that case we can select in a visual studion tool box label or other design and
- also get different label or other design formats.
-operating system : windows
+DashBoard.cs file is connected with db. here's why i provide the github link of this file for see the code dashboard.cs.
+operating system : window 
 
 **********GUI*************
 Visual studio 2022
